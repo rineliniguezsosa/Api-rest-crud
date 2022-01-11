@@ -42,7 +42,7 @@ router.post('/agregar',async(req,res)=>{
      try{
           res.send(save)
      }catch(err){
-          res.send(err)
+        res.send("Message:Algo salio mal")
      }
 })
 

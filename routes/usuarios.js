@@ -13,6 +13,7 @@ router.get('/todos',async(req,res)=>{
 })
 
 router.get('/usuariobyid/:id',async(req,res)=>{
+    const id = req.params.id;
     const usuariobyid = await Modelusuario.findById({_id:id})
     try{
         res.send(usuariobyid)

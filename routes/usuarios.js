@@ -25,6 +25,11 @@ router.get('/usuariobyid/:id',async(req,res)=>{
 router.delete('/deletebyid/:id',async(req,res)=>{
     const id = req.params.id
     const deletebyid = await Modelusuario.deleteOne({_id:id})
+    try{
+        res.send(deletebyid)
+    }catch(err){
+        res.send("Message:Algo salio mal")
+    }
 })
 
 router.post('/agregar',async(req,res)=>{

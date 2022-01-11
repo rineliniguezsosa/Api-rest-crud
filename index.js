@@ -1,5 +1,6 @@
 const express = require('express')
 const router = require('./routes/usuarios')
+const mongose = require('mongose')
 const app = express()
 const port = 3000;
 

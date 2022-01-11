@@ -12,6 +12,15 @@ router.get('/todos',async(req,res)=>{
 
 })
 
+router.get('/usuariobyid/:id',async(req,res)=>{
+    const usuariobyid = await Modelusuario.findById({_id:id})
+    try{
+        res.send(usuariobyid)
+    }catch(err){
+        res.send("Message:Algo salio mal")
+    }
+})
+
 router.post('/agregar',async(req,res)=>{
     const usuario = new Modelusuario({      
         nombre: req.body.nombre,

@@ -8,4 +8,4 @@ const usuario = mongoose.Schema({
 })
 
 
-module.exports = usuario
+module.exports = mongoose.model('Usuario',usuario)

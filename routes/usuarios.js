@@ -22,6 +22,10 @@ router.get('/usuariobyid/:id',async(req,res)=>{
     }
 })
 
+router.delete('/deletebyid/:id',async(req,res)=>{
+
+})
+
 router.post('/agregar',async(req,res)=>{
     const usuario = new Modelusuario({      
         nombre: req.body.nombre,

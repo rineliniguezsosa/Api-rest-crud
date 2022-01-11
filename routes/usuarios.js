@@ -7,7 +7,7 @@ router.get('/all',async (req,res)=>{
 })
 
 router.post('/agregar',async(req,res)=>{
-    const user = new Modelusuario({
+    const usuario = new Modelusuario({
         email: req.body.email,
     })
     const save = await user.save();

@@ -23,7 +23,8 @@ router.get('/usuariobyid/:id',async(req,res)=>{
 })
 
 router.delete('/deletebyid/:id',async(req,res)=>{
-
+    const id = req.params.id
+    const deletebyid = await Modelusuario.deleteOne({_id:id})
 })
 
 router.post('/agregar',async(req,res)=>{

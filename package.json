@@ -18,5 +18,10 @@
   "bugs": {
     "url": "https://github.com/rineliniguezsosa/Api-rest-crud/issues"
   },
-  "homepage": "https://github.com/rineliniguezsosa/Api-rest-crud#readme"
+  "homepage": "https://github.com/rineliniguezsosa/Api-rest-crud#readme",
+  "dependencies": {
+    "express": "^4.17.2",
+    "mongoose": "^6.1.6",
+    "nodemon": "^2.0.15"
+  }
 }

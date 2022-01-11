@@ -5,6 +5,7 @@ const app = express()
 const port = 3000;
 
 app.use('/crud',router)
+app.use(express.json())
 
 app.listen(port,()=>{
     console.log(`El servicio esta corriendo http://localhost:${port}`)

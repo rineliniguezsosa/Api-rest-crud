@@ -46,4 +46,8 @@ router.post('/agregar',async(req,res)=>{
      }
 })
 
+router.patch('/actualizabyid/:id',async(req,res)=>{
+    
+})
+
 module.exports = router

@@ -2,8 +2,8 @@ const express = require('express')
 const router = express.Router()
 const Modelusuario = require('../models/Usuarios')
 
-router.get('/all',async (req,res)=>{
-    res.send({"hola":"mundo"})
+router.get('/todos',async(req,res)=>{
+    
 })
 
 router.post('/agregar',async(req,res)=>{

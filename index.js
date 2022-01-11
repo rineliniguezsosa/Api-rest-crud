@@ -1,7 +1,9 @@
 const express = require('express')
+const router = require('./routes/usuarios')
 const app = express()
 const port = 3000;
 
+app.use('/crud',router)
 
 
 

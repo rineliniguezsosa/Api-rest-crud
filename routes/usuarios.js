@@ -51,9 +51,9 @@ router.post('/agregar',async(req,res)=>{
 router.put('/actualizabyid/:id',async(req,res)=>{
     const id = req.params.id
     //{$set:{nombre:req.body,edad:req.body,email:req.body}}
-    const actualiza2 = await Modelusuario.updateOne({_id:id},{$set:req.body})
+    const actualiza = await Modelusuario.updateOne({_id:id},{$set:req.body})
     try{
-        res.send(actualiza2)
+        res.send(actualiza)
    }catch(err){
       res.send("Message:Algo salio mal")
    }

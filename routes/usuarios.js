@@ -1,4 +1,5 @@
 const express = require('express')
+const { Model } = require('mongoose')
 const router = express.Router()
 const Modelusuario = require('../models/Usuarios')
 
@@ -47,7 +48,13 @@ router.post('/agregar',async(req,res)=>{
 })
 
 router.patch('/actualizabyid/:id',async(req,res)=>{
-    
+    const id = req.params.id
+    const actualiza = Modelusuario.update({_id:id},{$set:req.body})
+    try{
+        res.send(actualiza)
+   }catch(err){
+      res.send("Message:Algo salio mal")
+   }
 })
 
 module.exports = router

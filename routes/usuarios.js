@@ -34,6 +34,7 @@ router.delete('/deletebyid/:id',async(req,res)=>{
 })
 
 router.post('/agregar',async(req,res)=>{
+
     const usuario = new Modelusuario({      
         nombre: req.body.nombre,
         edad: req.body.edad,   
@@ -47,11 +48,12 @@ router.post('/agregar',async(req,res)=>{
      }
 })
 
-router.patch('/actualizabyid/:id',async(req,res)=>{
+router.put('/actualizabyid/:id',async(req,res)=>{
     const id = req.params.id
-    const actualiza = Modelusuario.update({_id:id},{$set:req.body})
+    //{$set:{nombre:req.body,edad:req.body,email:req.body}}
+    const actualiza2 = await Modelusuario.updateOne({_id:id},{$set:req.body})
     try{
-        res.send(actualiza)
+        res.send(actualiza2)
    }catch(err){
       res.send("Message:Algo salio mal")
    }

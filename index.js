@@ -11,6 +11,6 @@ app.listen(process.env.PORT,()=>{
     console.log(`El servicio esta corriendo http://localhost:3000`)
 })
 
-mongoose.connect("mongodb://localhost:27017",(err)=>{
+mongoose.connect(process.env.MONGOCONNECT,(err)=>{
     err ? console.log("Algo salio mal en la conexion !!") : console.log("Conexión exitosa !!")
 })

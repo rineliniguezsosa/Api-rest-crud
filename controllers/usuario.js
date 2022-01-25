@@ -60,5 +60,6 @@ module.exports = {
     todoslosusuarios,
     usuarioporid,
     deletebyid,
-    agregarusuario
+    agregarusuario,
+    actualizabyid
 }

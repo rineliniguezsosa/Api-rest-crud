@@ -45,8 +45,15 @@ const agregarusuario = async (req = request,res = response)=>{
      }
 }
 
-const actualizabyid = async ()=>{
-    
+const actualizabyid = async (req = request,res = response)=>{
+    const id = req.params.id
+    //{$set:{nombre:req.body,edad:req.body,email:req.body}}
+    const actualiza = await Modelusuario.updateOne({_id:id},{$set:req.body})
+    try{
+        res.json(actualiza)
+   }catch(err){
+        res.json({msg:"Algo salio mal"})
+   }
 }
 
 module.exports = {

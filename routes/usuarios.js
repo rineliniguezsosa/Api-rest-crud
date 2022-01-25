@@ -8,15 +8,7 @@ router.get('/todos',todoslosusuarios)
 
 router.get('/usuariobyid/:id',usuarioporid)
 
-router.delete('/deletebyid/:id',async(req,res)=>{
-    const id = req.params.id
-    const deletebyid = await Modelusuario.deleteOne({_id:id})
-    try{
-        res.send(deletebyid)
-    }catch(err){
-        res.send("Message:Algo salio mal")
-    }
-})
+router.delete('/deletebyid/:id',deletebyid)
 
 router.post('/agregar',async(req,res)=>{
 

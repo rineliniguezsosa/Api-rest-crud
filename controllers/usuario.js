@@ -12,7 +12,13 @@ const todoslosusuarios = async (res = response)=>{
 }
 
 const usuarioporid = async ()=>{
-    
+    const id = req.params.id;
+    const usuariobyid = await Modelusuario.findById({_id:id})
+    try{
+        res.json(usuariobyid)
+    }catch(err){
+        res.json({msg:"Algo salio mal"})
+    }
 }
 
 module.exports = {

@@ -1,12 +1,13 @@
 const express = require('express')
 const mongoose = require('mongoose')
 const usandolasrutas = require('./routes/usuarios')
+require('dotenv').config()
 
 const app = express()
 app.use(express.json())
 app.use('/crud',usandolasrutas)
 
-app.listen('3000',()=>{
+app.listen(process.env.PORT,()=>{
     console.log(`El servicio esta corriendo http://localhost:3000`)
 })
 

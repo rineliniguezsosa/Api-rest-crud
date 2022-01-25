@@ -21,8 +21,14 @@ const usuarioporid = async (req = request,res = response)=>{
     }
 }
 
-const deletebyid = async ()=>{
-
+const deletebyid = async (req = request,res = response)=>{
+    const id = req.params.id
+    const deletebyid = await Modelusuario.deleteOne({_id:id})
+    try{
+        res.json(deletebyid)
+    }catch(err){
+        res.json("Message:Algo salio mal")
+    }
 }
 
 module.exports = {

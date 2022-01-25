@@ -31,6 +31,10 @@ const deletebyid = async (req = request,res = response)=>{
     }
 }
 
+const agregarusuario = async ()=>{
+    
+}
+
 module.exports = {
     todoslosusuarios,
     usuarioporid,

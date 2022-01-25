@@ -1,5 +1,5 @@
 const Modelusuario = require('../models/Usuarios')
-
+const { response } = require('express')
 
 const todoslosusuarios = async ()=>{
     const todos = await Modelusuario.find({})

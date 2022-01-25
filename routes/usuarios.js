@@ -2,6 +2,7 @@ const express = require('express')
 const { Model } = require('mongoose')
 const router = express.Router()
 const Modelusuario = require('../models/Usuarios')
+const { todoslosusuarios } = require('../controllers/usuario')
 
 router.get('/todos',async(req,res)=>{
     const todos = await Modelusuario.find({})

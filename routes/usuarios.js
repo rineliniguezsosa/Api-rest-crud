@@ -17,7 +17,11 @@ router.get('/usuariobyid/:id',[check('id','No es un id valido').isMongoId()],val
 
 router.delete('/deletebyid/:id',[check('id','No es un id valido').isMongoId()],validarcampos,deletebyid)
 
-router.post('/agregar',[check('nombre','El campo Nombre es requerido!').notEmpty()],validarcampos,agregarusuario)
+router.post('/agregar',[
+    check('nombre','El campo Nombre es requerido!').notEmpty(),
+    check('nombre','Establece el Nombre en un formato adecuado').isInt()
+    ]
+    ,validarcampos,agregarusuario)
 
 router.put('/actualizabyid/:id',[check('id','No es un id valido').isMongoId()],validarcampos,actualizabyid)
 

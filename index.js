@@ -10,6 +10,6 @@ app.listen('3000',()=>{
     console.log(`El servicio esta corriendo http://localhost:3000`)
 })
 
-mongoose.connect("mongodb://localhost:27017",(err)=>{
+mongoose.connect("mongodb+srv://rinel:1234@cluster01restapi.phchc.mongodb.net/test",(err)=>{
     err ? console.log("Algo salio mal en la conexion !!") : console.log("Conexión exitosa !!")
 })

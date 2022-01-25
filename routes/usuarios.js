@@ -30,12 +30,9 @@ router.post('/agregar',[
 
 router.put('/actualizabyid/:id',[
     check('id','No es un id valido').isMongoId(),
-    check('nombre','El campo Nombre es requerido!').notEmpty(),
-    check('nombre','Establece el Nombre en un formato adecuado').isString(),
-    check('edad','El campo Edad es requerido!').notEmpty(),
-    check('edad','Establece la Edad en un formato adecuado').isInt(),
-    check('email','El campo Email es requerido!').notEmpty(),
-    check('email','Establece el Email en un formato adecuado').isEmail(),
+    check('nombre','Establece el Nombre en un formato adecuado').optional().isString(),
+    check('edad','Establece la Edad en un formato adecuado').optional().isInt(),
+    check('email','Establece el Email en un formato adecuado').optional().isEmail(),
     validarcampos]
     ,actualizabyid)
 

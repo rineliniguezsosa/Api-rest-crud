@@ -2,7 +2,7 @@ const express = require('express')
 const { Model } = require('mongoose')
 const router = express.Router()
 const Modelusuario = require('../models/Usuarios')
-const { todoslosusuarios,usuarioporid,deletebyid } = require('../controllers/usuario')
+const { todoslosusuarios,usuarioporid,deletebyid,agregarusuario } = require('../controllers/usuario')
 
 router.get('/todos',todoslosusuarios)
 

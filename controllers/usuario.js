@@ -27,7 +27,7 @@ const deletebyid = async (req = request,res = response)=>{
     try{
         res.json(deletebyid)
     }catch(err){
-        res.json("Message:Algo salio mal")
+        res.json({msg:"Message:Algo salio mal"})
     }
 }
 

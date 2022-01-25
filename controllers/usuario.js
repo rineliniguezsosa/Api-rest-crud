@@ -31,8 +31,18 @@ const deletebyid = async (req = request,res = response)=>{
     }
 }
 
-const agregarusuario = async ()=>{
-    
+const agregarusuario = async (req = request,res = response)=>{
+    const usuario = new Modelusuario({      
+        nombre: req.body.nombre,
+        edad: req.body.edad,   
+        email: req.body.email
+    })
+    const save = await usuario.save();
+     try{
+          res.json(save)
+     }catch(err){
+        res.json("Message:Algo salio mal")
+     }
 }
 
 module.exports = {

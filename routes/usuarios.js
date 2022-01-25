@@ -1,7 +1,6 @@
 const express = require('express')
-const { Model } = require('mongoose')
+const { check } = require('express-validator')
 const router = express.Router()
-const Modelusuario = require('../models/Usuarios')
 const { 
     todoslosusuarios,
     usuarioporid,

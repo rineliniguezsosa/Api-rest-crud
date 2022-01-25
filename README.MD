@@ -6,5 +6,9 @@
 
 `<express-validator>` : <https://express-validator.github.io/docs/>
 
+## Requerimientos
+
+### Node
+- #### Instalación de Node.js en Windows
 
 

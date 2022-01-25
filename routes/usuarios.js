@@ -19,9 +19,9 @@ router.delete('/deletebyid/:id',[check('id','No es un id valido').isMongoId(),va
 
 router.post('/agregar',[
     check('nombre','El campo Nombre es requerido!').notEmpty(),
-    check('nombre','Establece el Nombre en un formato adecuado').not().isString(),
+    check('nombre','Establece el Nombre en un formato adecuado').isString(),
     check('edad','El campo Edad es requerido!').notEmpty(),
-    check('edad','Establece la Edad en un formato adecuado').not().isInt(),
+    check('edad','Establece la Edad en un formato adecuado').isInt(),
     check('email','El campo Email es requerido!').notEmpty(),
     check('email','Establece el Email en un formato adecuado').isEmail(),
     validarcampos

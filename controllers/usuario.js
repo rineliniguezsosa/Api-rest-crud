@@ -21,6 +21,10 @@ const usuarioporid = async ()=>{
     }
 }
 
+const deletebyid = async ()=>{
+    
+}
+
 module.exports = {
     todoslosusuarios,
     usuarioporid

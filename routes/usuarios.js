@@ -1,7 +1,7 @@
 const express = require('express')
 const { check } = require('express-validator')
 const router = express.Router()
-const validarcampos = require('../middlewares/validarcampos')
+const { validarcampos } = require('../middlewares/validarcampos')
 
 const { 
     todoslosusuarios,
@@ -13,16 +13,17 @@ const {
 
 router.get('/todos',todoslosusuarios)
 
-router.get('/usuariobyid/:id',[check('id','No es un id valido').isMongoId()],validarcampos,usuarioporid)
+router.get('/usuariobyid/:id',[check('id','No es un id valido').isMongoId(),validarcampos],usuarioporid)
 
-router.delete('/deletebyid/:id',[check('id','No es un id valido').isMongoId()],validarcampos,deletebyid)
+router.delete('/deletebyid/:id',[check('id','No es un id valido').isMongoId(),validarcampos],deletebyid)
 
 router.post('/agregar',[
     check('nombre','El campo Nombre es requerido!').notEmpty(),
-    check('nombre','Establece el Nombre en un formato adecuado').not().isString()
+    check('nombre','Establece el Nombre en un formato adecuado').not().isString(),
+    validarcampos
     ]
-    ,validarcampos,agregarusuario)
+    ,agregarusuario)
 
-router.put('/actualizabyid/:id',[check('id','No es un id valido').isMongoId()],validarcampos,actualizabyid)
+router.put('/actualizabyid/:id',[check('id','No es un id valido').isMongoId(),validarcampos],actualizabyid)
 
 module.exports = router

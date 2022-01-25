@@ -6,15 +6,7 @@ const { todoslosusuarios,usuarioporid } = require('../controllers/usuario')
 
 router.get('/todos',todoslosusuarios)
 
-router.get('/usuariobyid/:id',async(req,res)=>{
-    const id = req.params.id;
-    const usuariobyid = await Modelusuario.findById({_id:id})
-    try{
-        res.send(usuariobyid)
-    }catch(err){
-        res.send("Message:Algo salio mal")
-    }
-})
+router.get('/usuariobyid/:id',usuarioporid)
 
 router.delete('/deletebyid/:id',async(req,res)=>{
     const id = req.params.id

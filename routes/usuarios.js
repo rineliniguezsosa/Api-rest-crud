@@ -1,12 +1,15 @@
 const express = require('express')
 const { check } = require('express-validator')
 const router = express.Router()
+const validarcampos = require('../middlewares/validarcampos')
+
 const { 
     todoslosusuarios,
     usuarioporid,
     deletebyid,
     agregarusuario,
     actualizabyid } = require('../controllers/usuario')
+
 
 router.get('/todos',todoslosusuarios)
 

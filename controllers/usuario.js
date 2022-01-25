@@ -11,7 +11,7 @@ const todoslosusuarios = async (res = response)=>{
     }
 }
 
-const usuarioporid = async ()=>{
+const usuarioporid = async (req = request,res = response)=>{
     const id = req.params.id;
     const usuariobyid = await Modelusuario.findById({_id:id})
     try{
@@ -22,7 +22,7 @@ const usuarioporid = async ()=>{
 }
 
 const deletebyid = async ()=>{
-    
+
 }
 
 module.exports = {

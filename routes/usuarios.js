@@ -10,7 +10,7 @@ const {
 
 router.get('/todos',todoslosusuarios)
 
-router.get('/usuariobyid/:id',usuarioporid)
+router.get('/usuariobyid/:id',[check('id','No es un id valido').isMongoId()],usuarioporid)
 
 router.delete('/deletebyid/:id',deletebyid)
 

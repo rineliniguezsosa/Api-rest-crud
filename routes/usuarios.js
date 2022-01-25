@@ -10,20 +10,7 @@ router.get('/usuariobyid/:id',usuarioporid)
 
 router.delete('/deletebyid/:id',deletebyid)
 
-router.post('/agregar',async(req,res)=>{
-
-    const usuario = new Modelusuario({      
-        nombre: req.body.nombre,
-        edad: req.body.edad,   
-        email: req.body.email
-    })
-    const save = await usuario.save();
-     try{
-          res.send(save)
-     }catch(err){
-        res.send("Message:Algo salio mal")
-     }
-})
+router.post('/agregar',agregarusuario)
 
 router.put('/actualizabyid/:id',async(req,res)=>{
     const id = req.params.id

@@ -15,10 +15,10 @@ router.get('/todos',todoslosusuarios)
 
 router.get('/usuariobyid/:id',[check('id','No es un id valido').isMongoId()],validarcampos,usuarioporid)
 
-router.delete('/deletebyid/:id',deletebyid)
+router.delete('/deletebyid/:id',[check('id','No es un id valido').isMongoId()],validarcampos,deletebyid)
 
 router.post('/agregar',agregarusuario)
 
-router.put('/actualizabyid/:id',actualizabyid)
+router.put('/actualizabyid/:id',[check('id','No es un id valido').isMongoId()],validarcampos,actualizabyid)
 
 module.exports = router

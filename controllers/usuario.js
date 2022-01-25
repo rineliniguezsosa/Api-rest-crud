@@ -9,3 +9,7 @@ const todoslosusuarios = async ()=>{
         res.send("Message:Algo salio mal")
     }
 }
+
+module.exports = {
+    todoslosusuarios
+}

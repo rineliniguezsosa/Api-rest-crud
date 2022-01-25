@@ -48,5 +48,6 @@ const agregarusuario = async (req = request,res = response)=>{
 module.exports = {
     todoslosusuarios,
     usuarioporid,
-    deletebyid
+    deletebyid,
+    agregarusuario
 }

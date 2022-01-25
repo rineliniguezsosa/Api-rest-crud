@@ -22,6 +22,8 @@ router.post('/agregar',[
     check('nombre','Establece el Nombre en un formato adecuado').not().isString(),
     check('edad','El campo Edad es requerido!').notEmpty(),
     check('edad','Establece la Edad en un formato adecuado').not().isInt(),
+    check('email','El campo Email es requerido!').notEmpty(),
+    check('email','Establece el Email en un formato adecuado').isEmail(),
     validarcampos
     ]
     ,agregarusuario)

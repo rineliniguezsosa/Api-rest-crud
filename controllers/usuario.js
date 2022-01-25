@@ -22,5 +22,6 @@ const usuarioporid = async ()=>{
 }
 
 module.exports = {
-    todoslosusuarios
+    todoslosusuarios,
+    usuarioporid
 }

@@ -1,5 +1,9 @@
 # Api rest
 
-## Documentación oficial
+### Links Documentación oficial
 
-#####Moongose [link](https://mongoosejs.com/ "Heading link")
+`<Moongose>` : <https://mongoosejs.com/>
+`<express-validator>` : <https://express-validator.github.io/docs/>
+
+
+

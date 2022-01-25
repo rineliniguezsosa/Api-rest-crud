@@ -11,6 +11,10 @@ const todoslosusuarios = async (res = response)=>{
     }
 }
 
+const usuarioporid = async ()=>{
+    
+}
+
 module.exports = {
     todoslosusuarios
 }

@@ -45,6 +45,10 @@ const agregarusuario = async (req = request,res = response)=>{
      }
 }
 
+const actualizabyid = async ()=>{
+    
+}
+
 module.exports = {
     todoslosusuarios,
     usuarioporid,

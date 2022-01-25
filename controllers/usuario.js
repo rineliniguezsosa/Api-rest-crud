@@ -1,12 +1,13 @@
+const { response, request } = require('express');
 const Modelusuario = require('../models/Usuarios')
-const { response } = require('express')
+
 
 const todoslosusuarios = async (res = response)=>{
     const todos = await Modelusuario.find({})
     try{
-        res.send(todos)
+        res.json(todos)
     }catch(err){
-        res.send("Message:Algo salio mal")
+        res.json({msg:"Algo salio mal"})
     }
 }
 

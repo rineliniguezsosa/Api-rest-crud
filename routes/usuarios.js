@@ -28,6 +28,12 @@ router.post('/agregar',[
     ]
     ,agregarusuario)
 
-router.put('/actualizabyid/:id',[check('id','No es un id valido').isMongoId(),validarcampos],actualizabyid)
+router.put('/actualizabyid/:id',[
+    check('id','No es un id valido').isMongoId(),
+    check('nombre','Establece el Nombre en un formato adecuado').isString(),
+    check('edad','Establece la Edad en un formato adecuado').isInt(),
+    check('email','Establece el Email en un formato adecuado').isEmail(),
+    validarcampos]
+    ,actualizabyid)
 
 module.exports = router

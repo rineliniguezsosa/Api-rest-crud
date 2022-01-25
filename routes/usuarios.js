@@ -4,15 +4,7 @@ const router = express.Router()
 const Modelusuario = require('../models/Usuarios')
 const { todoslosusuarios } = require('../controllers/usuario')
 
-router.get('/todos',async(req,res)=>{
-    const todos = await Modelusuario.find({})
-    try{
-        res.send(todos)
-    }catch(err){
-        res.send("Message:Algo salio mal")
-    }
-
-})
+router.get('/todos',todoslosusuarios)
 
 router.get('/usuariobyid/:id',async(req,res)=>{
     const id = req.params.id;

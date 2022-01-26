@@ -10,10 +10,10 @@
 
 Para que el servidor Node se ejecute localmente:
 
--Clona este repositorio
--`<npm install>`para instalar todas las dependencias requeridas
--Edite su .env para cambiar el estado de la variable (MONGOCONNECT) para establecer la conexión a mongo compass
--`<nodemon index.js>`para iniciar el servidor local. 
+-Clona este repositorio <br>
+-`npm install`para instalar todas las dependencias requeridas <br>
+-Edite su .env para cambiar el estado de la variable (MONGOCONNECT) para establecer la conexión a mongo compass <br>
+-`nodemon index.js`para iniciar el servidor local. 
 
 
 
